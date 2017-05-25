@@ -43,11 +43,15 @@ hbs.registerHelper('upperIt', (text) => {
     return text.toUpperCase();
 });
 
+// hbs.registerHelper('italicIt', (text) => {
+//     var italized = text.italics();
+// });
+
 app.get('/', (req, res) => {
     res.render('home.hbs', {
         pageHead: 'Home',
         pageTitle: 'Home page',
-        bodyMssg: 'This is paragraph'
+        bodyMssg: 'This is paragraph.'
     });
 });
 
@@ -55,7 +59,15 @@ app.get('/about', (req, res) => {
     res.render('about.hbs', {
         pageHead: 'Sample',
         pageTitle: 'About page',
-        bodyMssg: 'This is a sample paragraph'
+        bodyMssg: 'This is a sample paragraph.'
+    });
+});
+
+app.get('/package', (req, res) => {
+    res.render('package.hbs', {
+        pageHead: 'Packages',
+        pageTitle: 'Package page',
+        bodyMssg: 'This is a sample package page.'
     });
 });
 
